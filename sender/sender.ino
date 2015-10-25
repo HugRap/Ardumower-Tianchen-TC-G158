@@ -30,7 +30,7 @@
 // #define USE_DEVELOPER_TEST    1      // uncomment for new perimeter signal test (developers) 
 
 // --- MC33926 motor driver ---
-#define USE_DOUBLE_AMPLTIUDE    1         // uncomment to use +/- input voltage for amplitude (default), 
+//#define USE_DOUBLE_AMPLTIUDE    1         // uncomment to use +/- input voltage for amplitude (default), 
                                          // comment to use only +input/GND voltage for amplitude
                                          
 #define pinIN1       9  // M1_IN1         (if using old L298N driver, connect this pin to L298N-IN1)
@@ -49,7 +49,7 @@
 
 // ---- sender current control (via potentiometer) ----
 // sender modulates signal (PWM), based on duty-cycle set via this potentiometer
-#define USE_POT      0  // use potentiometer for current control? (set to '0' if not connected!)
+#define USE_POT      1  // use potentiometer for current control? (set to '0' if not connected!)
 #define pinPot      A3  // 100k potentiometer (current control)   
 
 // ---- sender automatic standby (via current sensor for charger) ----
