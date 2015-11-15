@@ -44,29 +44,29 @@
 #include "due.h"
 
 // ------ pins---------------------------------------
-#define pinMotorEnable  37         // EN motors enable
-#define pinMotorLeftPWM 5          // M1_IN1 left motor PWM pin
+#define pinMotorEnable  37         // EN motors enable                                                        /// NOT USED
+#define pinMotorLeftPWM 4          // M1_IN1 left motor PWM pin                                               /// WAS 5
 #define pinMotorLeftDir 31         // M1_IN2 left motor Dir pin
 #define pinMotorLeftSense A1       // M1_FB  left motor current sense
-#define pinMotorLeftFault 25       // M1_SF  left motor fault
+#define pinMotorLeftFault 25       // M1_SF  left motor fault                                                 /// NOT USED
                                                              
 #define pinMotorRightPWM  3        // M2_IN1 right motor PWM pin
 #define pinMotorRightDir 33        // M2_IN2 right motor Dir pin
 #define pinMotorRightSense A0      // M2_FB  right motor current sense
-#define pinMotorRightFault 27      // M2_SF  right motor fault
+#define pinMotorRightFault 27      // M2_SF  right motor fault                                                /// NOT USED
                                     
 #define pinMotorMowPWM 2           // M1_IN1 mower motor PWM pin (if using MOSFET, use this pin)
 #define pinMotorMowDir 29          // M1_IN2 mower motor Dir pin (if using MOSFET, keep unconnected)
 #define pinMotorMowSense A3        // M1_FB  mower motor current sense  
-#define pinMotorMowFault 26        // M1_SF  mower motor fault   (if using MOSFET/L298N, keep unconnected)
-#define pinMotorMowEnable 28       // EN mower motor enable      (if using MOSFET/L298N, keep unconnected)
-#define pinMotorMowRpm A11
+#define pinMotorMowFault 26        // M1_SF  mower motor fault   (if using MOSFET/L298N, keep unconnected)    /// NOT USED
+#define pinMotorMowEnable 28       // EN mower motor enable      (if using MOSFET/L298N, keep unconnected)    /// NOT USED
+#define pinMotorMowRpm 18                                                                                     /// WAS #define pinMotorMowRpm A11
     
 #define pinBumperLeft 39           // bumper pins
-#define pinBumperRight 38
+#define pinBumperRight 37                                                                                     /// WAS 38
 
-#define pinDropLeft 45           // drop pins                                                                                          Dropsensor - Absturzsensor
-#define pinDropRight 23          // drop pins                                                                                          Dropsensor - Absturzsensor
+#define pinDropLeft 45           // drop pins         Dropsensor - Absturzsensor                              /// NOT USED
+#define pinDropRight 23          // drop pins         Dropsensor - Absturzsensor                              /// NOT USED
 
 #define pinSonarCenterTrigger 24   // ultrasonic sensor pins
 #define pinSonarCenterEcho 22
@@ -82,20 +82,20 @@
 #define pinTilt 35                 // Tilt sensor (required for TC-G158 board)
 #define pinButton 51               // digital ON/OFF button
 #define pinBatteryVoltage A2       // battery voltage sensor
-#define pinBatterySwitch 4         // battery-OFF switch   
+#define pinBatterySwitch 4         // battery-OFF switch                                                      /// NOT USED   
 #define pinChargeVoltage A9        // charging voltage sensor
 #define pinChargeCurrent A8        // charge current sensor
-#define pinChargeRelay 50          // charge relay
+#define pinChargeRelay 50          // charge relay                                                            /// NOT USED
 #define pinRemoteMow 12            // remote control mower motor
 #define pinRemoteSteer 11          // remote control steering 
 #define pinRemoteSpeed 10          // remote control speed
 #define pinRemoteSwitch 52         // remote control switch
-#define pinVoltageMeasurement A7   // test pin for your own voltage measurements
+#define pinVoltageMeasurement A7   // test pin for your own voltage measurements                              /// NOT USED
 #ifdef __AVR__
-  #define pinOdometryLeft A12      // left odometry sensor
+  #define pinOdometryLeft A15      // left odometry sensor                                                    /// WAS A12
   #define pinOdometryLeft2 A13     // left odometry sensor (optional two-wire)
-  #define pinOdometryRight A14     // right odometry sensor 
-  #define pinOdometryRight2 A15    // right odometry sensor (optional two-wire)  
+  #define pinOdometryRight A12     // right odometry sensor                                                   /// WAS A14 
+  #define pinOdometryRight2 A14    // right odometry sensor (optional two-wire)  
 #else
   #define pinOdometryLeft DAC0     // left odometry sensor
   #define pinOdometryLeft2 DAC1    // left odometry sensor (optional two-wire)
@@ -109,7 +109,7 @@
 #define pinUserSwitch1 46          // user-defined switch 1
 #define pinUserSwitch2 47          // user-defined switch 2
 #define pinUserSwitch3 48          // user-defined switch 3
-#define pinRain 44                 // rain sensor
+#define pinRain 44                 // rain sensor                                                             /// NOT USED
 // IMU (compass/gyro/accel): I2C  (SCL, SDA) 
 // Bluetooth: Serial2 (TX2, RX2)
 // GPS: Serial3 (TX3, RX3) 
